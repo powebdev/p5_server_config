@@ -1,17 +1,33 @@
 # p5_server_config
 Project 5 for Udacity Full Stack Web Dev Nanodegree
 
-The IP address and SSH port so your server can be accessed by the reviewer.
-IP addess: 52.33.246.117
-SSH port: 2200
-URL to catalog app:
+## Server Access Information
+* IP addess: 52.33.246.117
+* SSH port: 2200
+* URL to catalog app:
 http://ec2-52-33-246-117.us-west-2.compute.amazonaws.com/
-ii. The complete URL to your hosted web application.
 
-iii. A summary of software you installed and configuration changes made.
+default password for user: grader is provided in the "Notes to Reviewr" field.
 
-iv. A list of any third-party resources you made use of to complete this project.
+## Configuration Changed
+* ran apt-get update and upgrade
+* UFW only allows traffic on port 2200, 80, and 123
+* root user remote login disabled
+* user: grader added to sudoers
+* key-based ssh authentication required, password login disabled
+* ssh hosted on port 2200
+* timezone changed to UTC
 
-Open your ~/.ssh/udacity_key.rsa file in a text editor and copy the contents of that file.
+## Software installed(updated)
+* unattended-upgrades: for managing package updates automatically
+* Apache: for hosting Catalog App
+* libapache2-mod-wsgi: for hosting Catalog App
+* Postgresql: for Catalog App DB requirement
+* NTP: for time sync
+* fail2ban: to monitor and prevent repeated unsuccessful login
+* Glances: for system monitoring
 
-During the submission process, paste the contents of the udacity_key.rsa file into the "Notes to Reviewer" field.
+## Python packages installed (for Catalog App)
+* flask
+* sqlalchemy
+* oauth2client
