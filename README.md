@@ -2,6 +2,7 @@
 Project 5 for Udacity Full Stack Web Dev Nanodegree
 
 ## Server Access Information
+# Note:Server access has been disable with completion of Udacity nanodegree
 * IP addess: 52.33.246.117
 * SSH port: 2200
 * URL to catalog app:
